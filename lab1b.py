@@ -5,7 +5,7 @@ n1=0
 n2=1
 c=0
 if (nt<=0):
-    print("Please enter the falid number of terms required")
+    print("Please enter the valid number of terms required")
 elif(nt==1):
     print(n1)
 else:
