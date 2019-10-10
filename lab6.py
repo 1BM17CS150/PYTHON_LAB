@@ -17,9 +17,9 @@ def validate(s):
         if len(l)==0 and i in ("{","(","["): 
            top=top+1
            l.append(i)
-        x=comp(l[top])
-        if len(l)!=0 and (i==x or (i in ("(","{","["))):
-              if i==x:
+      
+        elif len(l)!=0 and (i==comp(l[top]) or (i in ("(","{","["))):
+              if i==comp(l[top]):
                   l.pop()
                   top=top-1
               elif i in ("(","{","["):
@@ -27,7 +27,10 @@ def validate(s):
                 l.append(i)
         else:
             print("Invalid")
+            return
     if len(l)==0:
         print("Valid")
+    else:
+        print("Invalid")
 string=input("enter the string")
 validate(string)
