@@ -82,5 +82,6 @@ while 1:
     cur.execute("drop table stu")
     conn.commit()
  elif option==7:
+     conn.close()
      exit()
-conn.close()
+
